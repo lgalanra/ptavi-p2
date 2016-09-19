@@ -13,6 +13,16 @@ def minus(op1, op2):
     """ Function to substract the operands """
     return op1 - op2
 
+def mult(op1, op2):
+	return op1 * op2
+
+def div(op1, op2):
+	if op2 = 0
+		sys.exit("no se puede dividir por 0")
+	else
+		return op1 / op2
+		
+
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
