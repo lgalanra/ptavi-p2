@@ -17,10 +17,10 @@ def mult(op1, op2):
 	return op1 * op2
 
 def div(op1, op2):
-	if op2 = 0
-		sys.exit("no se puede dividir por 0")
-	else
-		return op1 / op2
+	try:
+		op1 / op2
+	except Error:
+		sys.exit("No se puede dividir por cero")
 		
 
 if __name__ == "__main__":
