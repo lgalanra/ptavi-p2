@@ -10,40 +10,28 @@ if __name__ == "__main__":
 
     with open('fichero.csv') as mifichero:
         texto = csv.reader(mifichero)
-  
         for linea in texto:
-        
-            print(linea, len(linea))
-          
+            print(linea)
             operando = linea[0]
             resultado = int(linea[1])
-                       
             if operando == "suma":
-                for i in range(2,len(linea)):
+                for i in range(2, len(linea)):
                     resultado = resultado + int(linea[i])
-                print(resultado)
-                
+                print("El resultado es: " + str(resultado))
             elif operando == "resta":
-                for i in range(2,len(linea)):
+                for i in range(2, len(linea)):
                     resultado = resultado - int(linea[i])
-                print(resultado)
-                
+                print("El resultado es: " + str(resultado))
             elif operando == "multiplica":
-                for i in range(2,len(linea)):
+                for i in range(2, len(linea)):
                     resultado = resultado * int(linea[i])
-                print(resultado)
-                
+                print("El resultado es: " + str(resultado))
             elif operando == "divide":
-                for i in range(2,len(linea)):
+                for i in range(2, len(linea)):
                     if int(linea[i]) != 0:
                         resultado = resultado / int(linea[i])
                     else:
                         sys.exit("División por cero no válida")
-                print(resultado)
-                
+                print("El resultado es: " + str(resultado))
             else:
                 print("La operación no se puede realizar")
-            
-        
-                
-
