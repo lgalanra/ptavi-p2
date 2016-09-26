@@ -4,6 +4,7 @@
 import sys
 import calcoo
 
+
 class CalculadoraHija(calcoo.Calculadora):
 
     def mult(self):
@@ -14,7 +15,6 @@ class CalculadoraHija(calcoo.Calculadora):
             return self.op1 / self.op2
         except ZeroDivisionError:
             sys.exit("Division by zero is not allowed")
-           
 if __name__ == "__main__":
 
     try:
@@ -22,9 +22,7 @@ if __name__ == "__main__":
         value2 = int(sys.argv[3])
     except ValueError:
         print("Introducir int o float")
-        
-    calc = CalculadoraHija(value1,value2)
-    
+    calc = CalculadoraHija(value1, value2)
     if sys.argv[2] == "suma":
         print(calc.suma())
     elif sys.argv[2] == "resta":
@@ -35,4 +33,3 @@ if __name__ == "__main__":
         print(calc.div())
     else:
         sys.exit("Operación no válida")
-    
