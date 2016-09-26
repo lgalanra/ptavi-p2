@@ -22,3 +22,26 @@ with open(texto) as d
             for i in range(2,len(line))
                 resultado = resultado + int(line[i])
             print(resultado)
+            
+        elif operador == "resta":
+            for i in range(2,len(line))
+                resultado = resultado - int(line[i])
+            print(resultado)
+        
+        elif operador == "multiplica":
+            for i in range(2,len(line))
+                resultado = resultado * int(line[i])
+            print(resultado)
+            
+        elif operador == "divide"
+            for i in range(2,len(line))
+                if int(line[i] != 0:
+                    resultado = resultado / int(line[i])
+                else:
+                    sys.exit("División por cero no válida")
+            print(resultado)
+            
+        else:
+            print("La operación no se puede realizar")
+            
+texto.close()
