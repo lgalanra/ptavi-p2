@@ -4,6 +4,8 @@
 import sys
 import calcoohija
 
+calc = CalculadoraHija()
+
 if __name__ == "__main__":
 
     texto = open(sys.argv[1])
@@ -14,15 +16,10 @@ if __name__ == "__main__":
         print(linea, len(linea))
         line = linea.split(',')
         operando = line[0]
-        newline = line[1:]
-        print(newline)
-        
-        print(operando)
-        
+        resultado = int(line[1])
+                   
         if operando == "suma":
-            resultado = int(line[1])
-            
-            for newline in line:
+            for i in range(2,len(line))
                 resultado = resultado + 1
             print(resultado)
             
