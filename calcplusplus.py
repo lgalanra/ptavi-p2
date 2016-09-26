@@ -2,46 +2,48 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import csv
 import calcoohija
+import csv
 
 
 if __name__ == "__main__":
 
-    texto = sys.argv[1]
+    with open('fichero.csv') as mifichero:
+        texto = csv.reader(mifichero)
+  
+        for linea in texto:
+        
+            print(linea, len(linea))
+          
+            operando = linea[0]
+            resultado = int(linea[1])
+                       
+            if operando == "suma":
+                for i in range(2,len(linea)):
+                    resultado = resultado + int(linea[i])
+                print(resultado)
+                
+            elif operando == "resta":
+                for i in range(2,len(linea)):
+                    resultado = resultado - int(linea[i])
+                print(resultado)
+                
+            elif operando == "multiplica":
+                for i in range(2,len(linea)):
+                    resultado = resultado * int(linea[i])
+                print(resultado)
+                
+            elif operando == "divide":
+                for i in range(2,len(linea)):
+                    if int(linea[i]) != 0:
+                        resultado = resultado / int(linea[i])
+                    else:
+                        sys.exit("División por cero no válida")
+                print(resultado)
+                
+            else:
+                print("La operación no se puede realizar")
+            
+        
+                
 
-with open(texto) as d:
-    lines = csv.reader(d)
-    
-    for fila in lines:
-        line = fila.split(',')
-        operador = line[0]
-        resultado = int(line[1])
-        
-        if operador == "suma":
-            for i in range(2,len(line)):
-                resultado = resultado + int(line[i])
-            print(resultado)
-            
-        elif operador == "resta":
-            for i in range(2,len(line)):
-                resultado = resultado - int(line[i])
-            print(resultado)
-        
-        elif operador == "multiplica":
-            for i in range(2,len(line)):
-                resultado = resultado * int(line[i])
-            print(resultado)
-            
-        elif operador == "divide":
-            for i in range(2,len(line)):
-                if int(line[i]) != 0:
-                    resultado = resultado / int(line[i])
-                else:
-                    sys.exit("División por cero no válida")
-            print(resultado)
-            
-        else:
-            print("La operación no se puede realizar")
-            
-texto.close()
