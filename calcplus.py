@@ -31,7 +31,7 @@ if __name__ == "__main__":
                 if int(line[i]) != 0:
                     resultado = resultado / int(line[i])
                 else:
-                    sys.exit("División por cero no válida")
+                    sys.exit("Division by zero is not allowed")
             print("El resultado es: " + str(resultado))
         else:
             print("La operación no se puede realizar")
