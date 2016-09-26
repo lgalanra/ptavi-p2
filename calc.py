@@ -5,24 +5,23 @@ import sys
 
 
 def plus(op1, op2):
-    """ Function to sum the operands """
     return op1 + op2
 
 
 def minus(op1, op2):
-    """ Function to substract the operands """
     return op1 - op2
 
+
 def mult(op1, op2):
-	return op1 * op2
+    return op1 * op2
+
 
 def div(op1, op2):
-	try:
-		op1 / op2
-	except DivError:
-		sys.exit("No se puede dividir por cero")
-		
 
+    try:
+        op1 / op2
+    except DivError:
+        sys.exit("No se puede dividir por cero")
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
