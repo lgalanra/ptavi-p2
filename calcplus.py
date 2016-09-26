@@ -12,7 +12,7 @@ if __name__ == "__main__":
     
     for linea in lineas:
     
-        print(linea, len(linea))
+        print(linea)
         line = linea.split(',')
         operando = line[0]
         resultado = int(line[1])
