@@ -4,7 +4,6 @@
 import sys
 import calcoohija
 
-calc = CalculadoraHija()
 
 if __name__ == "__main__":
 
@@ -19,21 +18,25 @@ if __name__ == "__main__":
         resultado = int(line[1])
                    
         if operando == "suma":
-            for i in range(2,len(line))
-                resultado = resultado + 1
+            for i in range(2,len(line)):
+                resultado = resultado + int(line[i])
             print(resultado)
             
         elif operando == "resta":
-            resultado = int(line[1])
+            for i in range(2,len(line)):
+                resultado = resultado - int(line[i])
+            print(resultado)
             
         elif operando == "multiplica":
-            resultado = int(line[1])
+            for i in range(2,len(line))
+                resultado = resultado * int(line[i])
+            print(resultado)
             
         elif operando == "divide":
             resultado = int(line[1])
             
         else:
-            sys.exit("bye")
+            print("La operación no se puede realizar")
         
         
                 
