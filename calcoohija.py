@@ -12,8 +12,8 @@ class CalculadoraHija(calcoo.Calculadora):
     def div(self):
         try:
             return self.op1 / self.op2
-        except DivError:
-            sys.exit("No se puede dividir por cero")
+        except ZeroDivisionError:
+            sys.exit("Division by zero is not allowed")
            
 if __name__ == "__main__":
 
