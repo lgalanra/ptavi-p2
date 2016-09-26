@@ -19,7 +19,7 @@ def mult(op1, op2):
 def div(op1, op2):
 	try:
 		op1 / op2
-	except Error:
+	except DivError:
 		sys.exit("No se puede dividir por cero")
 		
 
